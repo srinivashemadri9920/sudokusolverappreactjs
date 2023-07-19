@@ -1,8 +1,8 @@
 const Footer = () =>{
     return(
-        <footer class="page-footer">
-          <div class="footer-copyright">
-            <div class="container">
+        <footer className="page-footer">
+          <div className="footer-copyright">
+            <div className="container">
             © 2023 Srinivas
             <p>Developer by Srinivas Hemadri</p>
             </div>

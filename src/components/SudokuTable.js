@@ -1,14 +1,15 @@
 const SudokuTable = ({matrixKeys, handleInputChange, responseFromSvc, submit, sudokuValue, isLoading, reset}) =>{
     return(
         <form onSubmit={submit}>
-            <div id="sudokuContent " className="valign-wrapper col l4 offset-l4 m6 offset-m3 s12">
+            <div id="sudokuContent " className="col l4 offset-l4 m6 offset-m3 s12">
             <div className="card teal accent-4">
                 <div className="card-content white-text">
                     <h4 className="center-align card-title">Sudoku 9 X 9</h4>
-                    <h6>In every cell please enter numbers only ranging from 1 to 9</h6>
+                    <h6 className="center-align">In every cell please enter numbers only ranging from 1 to 9</h6>
 
                         <table id="sudokuTable">
                             <thead>
+                                <tr>
                                 <th></th>
                                 <th>1</th>
                                 <th>2</th>
@@ -19,6 +20,7 @@ const SudokuTable = ({matrixKeys, handleInputChange, responseFromSvc, submit, su
                                 <th>7</th>
                                 <th>8</th>
                                 <th>9</th>
+                                </tr>
                             </thead>
                             <tbody>
                             {matrixKeys.map((row, index1)=>(
@@ -41,21 +43,20 @@ const SudokuTable = ({matrixKeys, handleInputChange, responseFromSvc, submit, su
                             </tbody>
                         </table>
                 </div>
-                <div className="card-action center-align">
+                <div className="card-action ">
                     {
                         responseFromSvc?.hasError && (
                             <div id="errorContent">
-                                <h6 className="red-text"> <b>{responseFromSvc.errorMessage}</b> </h6>
+                                <h6 className="red-text center-align"> <b>{responseFromSvc.errorMessage}</b> </h6>
                             </div>
                         )
                     }
-                    <div id="footerControls">
+                    <div id="footerControls" className="center-align">
                         {
                             !isLoading? (
                                 <div>
-                                    <button class="btn waves-effect waves-light" type="submit">Solve Sudoku  </button>
-
-                                    <button class="btn waves-effect waves-light" type="button" onClick={reset}>Reset Sudoku  </button>
+                                    <button className="btn waves-effect waves-light" type="submit">Solve Sudoku  </button>
+                                    <button className="btn waves-effect waves-light" type="button" onClick={reset}>Reset Sudoku  </button>
                                 </div>
                                 ): (
                                     <div className="preloader-wrapper small active">
@@ -71,6 +72,7 @@ const SudokuTable = ({matrixKeys, handleInputChange, responseFromSvc, submit, su
                                     </div>
                                 )
                         }
+                        <p id="developerDetails" className="right-align grey-text text-lighten-2">Developed by - Srinivas Hemadri</p>
                     </div>
                     
                 </div>

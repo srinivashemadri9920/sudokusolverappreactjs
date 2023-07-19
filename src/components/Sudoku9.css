@@ -34,3 +34,7 @@ th{
 tr{
   border: none;
 }
+
+#developerDetails{
+  font-size: small;
+}

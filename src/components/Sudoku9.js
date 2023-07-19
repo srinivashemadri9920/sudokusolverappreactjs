@@ -97,7 +97,9 @@ const Sudoku9 = (props)=>{
 
     return(
         <div className="row">
+            
             <SudokuTable reset={reset} isLoading={isLoading} matrixKeys= {matrixKeys} sudokuValue = {sudokuValue} handleInputChange = {handleInputChange} responseFromSvc = {responseFromSvc} submit = {submit}/>
+            
         </div>
         
     )
