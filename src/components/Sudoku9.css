@@ -1,0 +1,36 @@
+td {
+    width: 10px;
+    height: 10px;
+    margin: 0px;
+    padding: 0px;
+    border: 2px solid white;
+    text-align: center;
+    font-size:xx-large;
+  }
+
+input#sudokuCustomInput{
+    margin: 0px;
+    padding: 1px;
+    text-align: center;
+    color: white;
+}
+
+div#footerControls{
+  margin-top: 20px;
+}
+
+table#sudokuTable{
+  width: 100%;
+}
+
+button{
+  margin: 10px;
+}
+
+th{
+  width: 0px;
+  text-align: center;
+}
+tr{
+  border: none;
+}
