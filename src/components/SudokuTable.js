@@ -2,10 +2,11 @@ const SudokuTable = ({matrixKeys, handleInputChange, responseFromSvc, submit, su
     return(
         <form onSubmit={submit}>
             <div id="sudokuContent " className="col l4 offset-l4 m6 offset-m3 s12">
-            <div className="card teal accent-4">
+            <div className="card brown lighten-2">
                 <div className="card-content white-text">
                     <h4 className="center-align card-title">Sudoku 9 X 9</h4>
                     <h6 className="center-align">In every cell please enter numbers only ranging from 1 to 9</h6>
+                    <hr></hr>
 
                         <table id="sudokuTable">
                             <thead>
@@ -47,7 +48,7 @@ const SudokuTable = ({matrixKeys, handleInputChange, responseFromSvc, submit, su
                     {
                         responseFromSvc?.hasError && (
                             <div id="errorContent">
-                                <h6 className="red-text center-align"> <b>{responseFromSvc.errorMessage}</b> </h6>
+                                <h6 className="red-text text-darken-4 center-align"> <b>{responseFromSvc.errorMessage}</b> </h6>
                             </div>
                         )
                     }
@@ -55,8 +56,8 @@ const SudokuTable = ({matrixKeys, handleInputChange, responseFromSvc, submit, su
                         {
                             !isLoading? (
                                 <div>
-                                    <button className="btn waves-effect waves-light" type="submit">Solve Sudoku  </button>
-                                    <button className="btn waves-effect waves-light" type="button" onClick={reset}>Reset Sudoku  </button>
+                                    <button className="btn waves-effect waves-light brown darken-3" type="submit">Solve Sudoku  </button>
+                                    <button className="btn waves-effect waves-light brown darken-3" type="button" onClick={reset}>Reset Sudoku  </button>
                                 </div>
                                 ): (
                                     <div className="preloader-wrapper small active">
