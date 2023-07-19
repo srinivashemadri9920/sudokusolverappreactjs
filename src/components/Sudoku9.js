@@ -12,7 +12,7 @@ const Sudoku9 = (props)=>{
     const [responseFromSvc, setResponseFromSvc] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
 
-    const isLocal = true;
+    const isLocal = false;
 
     const fetchMatrix = () =>{
         setIsLoading(true);
